@@ -1,5 +1,6 @@
 #define URL route for index() view
 from django.urls import path, include
+
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken.views import obtain_auth_token
 
@@ -7,7 +8,6 @@ from . import views
 
 router = DefaultRouter()
 router.register(r'tables', views.BookingViewSet)
-
 
 urlpatterns = [
     path('', views.index, name='index'),
