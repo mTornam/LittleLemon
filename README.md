@@ -1,11 +1,11 @@
-Coursera Backe-End Developer Capstone
+**Coursera Back-End Developer Capstone**
 
-Endpoints
+***Endpoints***
 
-/auth/users - (POST)
-/auth/token/login - (POST) 
+`/auth/users` - (POST)  
+`/auth/token/login` - (POST)  
 
-/restaurant/menu - (GET/POST)
-/restaurant/menu/{id}
+`/restaurant/menu` - (GET / POST)  
+`/restaurant/menu/{id}`  
 
-/restaurant/booking/tables - (POST)
+`/restaurant/booking/tables` - (POST)  
