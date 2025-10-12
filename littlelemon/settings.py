@@ -78,12 +78,16 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'deafult': {
         'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'your_db_name',
+        'USER': 'your_db_username',
+        'PASSWORD': 'your_db_password',
+        'HOST': 'localhost',
+        'PORT': '3306',
         'OPTIONS': {
-            'read_default_file': os.path.join(BASE_DIR / 'my.cnf'),
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        },
+        }
     }
 }
 
@@ -122,7 +126,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
